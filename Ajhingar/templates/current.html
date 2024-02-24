@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}Todo List{% endblock %} {% block
+heading %}
+<h3>ToDo tasks:</h3>
+{% endblock %} {% block menue%}<a href="/completed">Completed Tasks></a>
+{% endblock %} {% block add %}
+<form method="POST" action="/add" class="task">
+  <input
+    type="text"
+    name="task"
+    placeholder="   Add your task here ......."
+    required
+  />
+  <input type="submit" value="Add" class="btn-primary" />
+</form>
+{% endblock %} {% block list %} {% for current in tasks%}
+<div class="task" id="tsk{{current[0]}}">
+  <form method="POST">
+    <input type="checkbox" />
+    <a>{{current[1]}}</a>
+  </form>
+
+  <form method="POST" id="{{current[0]}}">
+    <input value="{{current[0]}}" name="boxid" hidden />
+    <input value="current" name="type" hidden />
+  </form>
+
+  <div name="options">
+    <button name="edit">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+    <button name="remove">
+      <i class="fa-regular fa-trash-can"></i>
+    </button>
+  </div>
+</div>
+{% endfor %} {% endblock %}
