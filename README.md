@@ -28,7 +28,7 @@ Let's make todo list management simple and enjoyable!
 
 ![apple-touch-icon](https://github.com/manojis41/Todo-kamilo/assets/126950007/7f091e38-3e3d-4aef-8241-ca2711809a08)
 
-<a href="https://manojis41.pythonanywhere.com/">Click for Demo</a>
+<a href="https://manojis41.pythonanywhere.com/"  target="_blank">Click for Demo</a>
 
 
 <h4>Technology used</h4>
