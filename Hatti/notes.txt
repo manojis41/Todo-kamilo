@@ -1,2 +1,0 @@
-Documment all the things in the repo
-Automate the database and user creation part
