@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}404 Error{% endblock %}
+{%block list%}
+Something went wrong <br> Please get back to homepage <a href='/current'>Current Tasks></a>
+<img src="{{url_for('static',filename='images/ant.png')}}" alt="ant" width="100%">
+{%endblock%}

@@ -7,9 +7,11 @@
     width: 100% !important;
   }
 }
+
 .task[style="display: none;"] {
   background: red;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -22,7 +24,14 @@ section[name="head"] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+}
+
+section[name='usrinfo'] p {
+  margin: 0;
+}
+
+section[name="list"] {
+  padding: 16px;
 }
 
 .card {
@@ -42,7 +51,8 @@ input {
   border: none;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   height: 24px;
   width: 100%;
   background: rgba(0, 0, 0, 0.11);
@@ -96,6 +106,7 @@ button:hover {
   background: #3584e4;
   color: white;
 }
+
 button[name="remove"]:hover {
   color: red;
 }
@@ -103,7 +114,23 @@ button[name="remove"]:hover {
 .btn-primary:hover {
   color: white;
   background: #2a7de2;
+  height: auto;
 }
+
+.btn-2 {
+  width: 100%;
+  margin: 16px 0px;
+  background: #3584e4;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-2:hover {
+  background: #2971ca;
+  color: white;
+  cursor: pointer;
+}
+
 a[href] {
   color: #37acdd;
 }
@@ -118,4 +145,14 @@ a[href]:hover {
 
 .task s {
   font-style: italic;
+}
+
+#username,
+#password {
+  border-top: 2px dotted #65a548;
+  border-bottom: 2px dotted #65a548;
+}
+.center{
+  display: flex;
+  justify-content: center;
 }
