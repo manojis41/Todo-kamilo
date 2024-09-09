@@ -1,9 +1,17 @@
-{% extends "base.html" %} {% block title %}Todo List{% endblock %} {% block
-heading %}
-<h3>Completed Tasks:</h3>
-{% endblock %} {% block menue%}<a href="/">Current Tasks></a>
-{% endblock %} 
-{% block list %} {% for completed in tasks%}
+{% extends "base.html" %}
+{% block title %}Todo Kamilo: Completed Tasks{% endblock %}
+
+{% block heading %}
+<section name='usrinfo'>
+  <p>Hi,{{user}}</p>
+  <a href="/logout">logout</a>
+</section>
+{% endblock %}
+
+{% block menue%}<a href="/current">Current Tasks></a>{% endblock %}
+
+{% block list %}
+{% for completed in tasks%}
 <div class="task" id="tsk{{completed[0]}}">
   <form method="POST">
     <input type="checkbox" checked />
@@ -24,4 +32,5 @@ heading %}
     </button>
   </div>
 </div>
-{% endfor %} {% endblock %}
+{% endfor %} 
+{% endblock %}

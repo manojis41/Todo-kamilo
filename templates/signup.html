@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Signup{% endblock %}
+
+{% block heading %}
+<h3>Create an account</h3>
+{% endblock %}
+
+{% block menue%}
+{% endblock %}
+
+{% block list %}
+<section name="signup">
+    <form method="post" name="">
+        <label for="username">Username</label>
+        <input name="username" id="username" type="text" required>
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password" required>
+        <input type="submit" value="Create an account" class="btn-2" />
+    </form>
+    <a class="center" href="/login">Alreday have an account></a>
+</section>
+{% endblock %}

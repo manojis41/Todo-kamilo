@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             editedTask = document.createElement("div");
             editedTask.innerHTML = `<form method="POST" action="/okay" class = "task" id = "updateForm">
     <input type="text" name="updatedTask" placeholder="      Update your task here ......." required />
-    <input value="${id}" name="boxid" hidden />
+    <input value="${id}" name="boxid" hidden />?
     <input value="${type}" name="type" hidden />
    <button type="submit"><i class="fa-regular fa-floppy-disk" ></i></button>
     <button name="cancel" type="reset" ><i class="fa-regular fa-rectangle-xmark"></i></button>

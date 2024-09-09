@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block heading %}
+<h3>Login Here</h3>
+{% endblock %}
+
+{% block menue%}<a href="/signup">Sign up></a>
+{% endblock %}
+
+{% block list %}
+<section name="Login">
+    <form method="post" name="">
+        <label for="username">Username</label>
+        <input name="username" id="username" type="text" required>
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password" required>
+        <input type="submit" value="Login" class="btn-2" />
+    </form>
+    <a class="center" href="/signup">Don't have an account yet!></a>
+</section>
+{% endblock %}
