@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, redirect, session, url_for
-import sqlite3
 from os import urandom
+from bcrypt import checkpw, gensalt, hashpw
+from sqlite3 import connect
 
 # connect to the database
-conn = sqlite3.connect('todo.db', check_same_thread=False)
+conn = connect('todo.db', check_same_thread=False)
 db = conn.cursor()
 
 app = Flask(__name__)
@@ -19,15 +20,20 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
         db.execute("SELECT password FROM users WHERE username= ?", (username,))
-        usrdata = db.fetchall()
-        stored_password = usrdata[0][0]
-        if stored_password == password:
-            print("Matched")
-            session['user'] = username
-            return redirect(url_for('home'))
-
+        usrdata = db.fetchone()
+        if usrdata:
+            password = password.encode("utf-8")
+            stored_password = usrdata[0]
+            if checkpw(password, stored_password):
+                session['user'] = username
+                return redirect(url_for('home'))
+            else:
+                message = "Incorrect Password"
         else:
-            print("Didn't mathced")
+            message = "Incorrect username."
+
+        return render_template("login.html", message=message)
+
     return render_template("login.html")
 
 
@@ -36,9 +42,18 @@ def signup():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        db.execute("INSERT INTO users (username,password) VALUES(?,?)",
-                   (username, password))
-        return redirect(url_for('login'))
+        db.execute("SELECT username FROM users WHERE username =? ", (username,))
+        existing_user = db.fetchone()
+        if existing_user:
+            message = "The username is already taken try another"
+            return render_template("signup.html", message=message)
+        else:
+            salt = gensalt(rounds=10)
+            password = password.encode("utf-8")
+            hashed_password = hashpw(password, salt)
+            db.execute("INSERT INTO users (username,password) VALUES(?,?)",
+                       (username, hashed_password))
+            return redirect(url_for('login'))
     return render_template("signup.html")
 
 
@@ -51,7 +66,6 @@ def logout():
 @app.route('/current', methods=["GET", "POST"])
 def home():
     user = session.get('user')
-    print('current/', user)
     if user == None:
         return redirect(url_for('login'))
     db.execute("SELECT * FROM current WHERE user=? ORDER BY id DESC", (user,))
@@ -62,7 +76,6 @@ def home():
 @app.route('/completed', methods=["GET", "POST"])
 def completed():
     user = session.get('user')
-    print('completed/', user)
     if user == None:
         return redirect(url_for('login'))
     db.execute("SELECT * FROM completed WHERE user=? ORDER BY id DESC", (user,))
