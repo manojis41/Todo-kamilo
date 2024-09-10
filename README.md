@@ -1,4 +1,4 @@
-![Todo-kamilo](https://github.com/manojis41/Todo-kamilo/assets/126950007/11332947-0733-4955-920c-155549ef2980)
+![apple-touch-icon](https://github.com/manojis41/Todo-kamilo/assets/126950007/7f091e38-3e3d-4aef-8241-ca2711809a08)
 # Todo kamilo
 
 It is a simple task management tool built with Flask and SQLite3. It allows users to add, update, and track their tasks, with options for both single-user and multi-user functionality.
@@ -14,26 +14,26 @@ It is a simple task management tool built with Flask and SQLite3. It allows user
 - **User Management (Multi-User)**:
   - Create an account and log in to manage your tasks.
   - View demo: [Demo](https://manojis41.pythonanywhere.com)
-
 ## Installation
 
 ### Single User Version
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone -b single-user https://github.com/manojis41/Todo-kamilo.git
    ```
-2. Navigate to the project directory and set up the environment:
-   ```bash
-   cd yourrepo
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-3. Install dependencies: (optional)
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the Flask application:
+1. **Activate the Virtual Environment:**
+
+   - **On macOS/Linux:**
+     ```bash
+     source .venv/bin/activate
+     ```
+
+   - **On Windows:**
+     ```bash
+     .venv\Scripts\activate
+     ```
+3. **Run the Flask application:**
    ```bash
    flask run
    ```
@@ -42,10 +42,48 @@ It is a simple task management tool built with Flask and SQLite3. It allows user
 
 - Access the demo version [here](https://manojis41.pythonanywhere.com).
 
+### Running the Multi-User Version Locally
+
+To run the multi-user version of Todo Kamilo on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone -b multi-user https://github.com/manojis41/Todo-kamilo.git
+   ```
+2. **Activate the Virtual Environment:**
+
+   - **On macOS/Linux:**
+     ```bash
+     source .venv/bin/activate
+     ```
+
+   - **On Windows:**
+     ```bash
+     .venv\Scripts\activate
+     ```
+
+3. **Start the Application:**
+
+   ```bash
+    flask run
+   ```
+
+4. **Set Up User Accounts:**
+
+   - Visit `http://127.0.0.1:5000/signup` or click the "Don't have an account yet?" link on the default page.
+   - Create a new account by filling out the registration form.
+   - After creating an account, you will be redirected to the login page.
+
+5. **Login and Use the App:**
+
+   - Enter your credentials on the login page.
+   - Once logged in, you can access and use the app with multiple user support.
+
+The multi-user version includes an extra table in the database for securely storing user credentials.
+
 ## Usage
 
-
-![apple-touch-icon](https://github.com/manojis41/Todo-kamilo/assets/126950007/7f091e38-3e3d-4aef-8241-ca2711809a08)
+![Todo-kamilo](https://github.com/manojis41/Todo-kamilo/assets/126950007/11332947-0733-4955-920c-155549ef2980)
 - **Single User**: Run the Flask app to manage todo tasks.
 - **Multi-User**: Sign up and log in to manage tasks.
 
@@ -77,8 +115,6 @@ It is a simple task management tool built with Flask and SQLite3. It allows user
 This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
 
 ## Contact
-
+**Email:**[contact@manoj41.com.np](mailto:contact@manoj41.com.np)
 For questions or support, visit [manoj41.com.np/contact](https://manoj41.com.np/contact) or check the contact information on GitHub.
 
-```
-Feel free to adjust any sections to better fit your needs!
