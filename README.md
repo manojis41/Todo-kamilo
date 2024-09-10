@@ -1,37 +1,81 @@
-# Todo-Kamilo: A Simple Todo List App
+![apple-touch-icon](https://github.com/manojis41/Todo-kamilo/assets/126950007/7f091e38-3e3d-4aef-8241-ca2711809a08)
+# Todo Kamilo - Single-User Version
 
-![Todo-kamilo](https://github.com/manojis41/Todo-kamilo/assets/126950007/11332947-0733-4955-920c-155549ef2980)
+**Todo Kamilo** is a simple todo list application built with Flask and SQLite3. This README provides instructions for installing, running, and contributing to the single-user version of the project.
 
+## Table of Contents
 
-Welcome to Todo-Kamilo, a simple todo list app built with Python's Flask, HTML, CSS, and JavaScript, using SQLite as the database. This app, also known as the Ajingar variant internally, is a basic implementation without form validation in both the frontend and backend.
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Features
-- Add tasks to your todo list
-- Mark tasks as completed
-- Edit tasks if you make mistakes
-- Delete tasks from the list
-- View completed tasks too
+## Project Overview
 
-## Future Plans
-In the future, Todo-Kamilo will be enhanced to include:
-- User authentication for individual sessions (login)
-- Improved form validation for a better user experience
-- Ability to create and manage multiple todo lists
+Todo Kamilo is a straightforward todo list app designed for personal use. It helps you keep track of your tasks with a clean and simple interface.
+
+## Installation
+
+### Prerequisites
+
+- Python 3.x installed on your PC.
+
+### Clone the Repository
+
+To get started, clone the repository:
+
+   ```bash
+   git clone -b single-user https://github.com/manojis41/Todo-kamilo.git
+   ```
+
+### Setting Up the Environment
+
+1. **Activate the Virtual Environment:**
+
+   - **On macOS/Linux:**
+     ```bash
+     source .venv/bin/activate
+     ```
+
+   - **On Windows:**
+     ```bash
+     .venv\Scripts\activate
+     ```
+
+   This will activate the virtual environment where all necessary packages are already installed.
 
 ## Usage
-For now, the app is hosted and open to everyone. You can add tasks, mark them as completed, and delete them without the need for login. Keep in mind that all tasks are visible to everyone, as there are no individual sessions.
 
-Feel free to contribute to the project by submitting bug reports, feature requests, or code improvements. Your feedback is valuable in shaping the future of Todo-Kamilo.
+1. **Start the Application:**
 
-Let's make todo list management simple and enjoyable!
+   - **On macOS/Linux:**
+     ```bash
+     source .venv/bin/activate
+     python3 app.py
+     ```
 
+   - **On Windows:**
+     ```bash
+     .venv\Scripts\activate
+     python3 app.py
+     ```
 
-![apple-touch-icon](https://github.com/manojis41/Todo-kamilo/assets/126950007/7f091e38-3e3d-4aef-8241-ca2711809a08)
+2. **Open Your Browser:**
 
-<a href="https://manojis41.pythonanywhere.com/"  target="_blank">Click for Demo</a>
+   Navigate to `http://127.0.0.1:5000/` to access the application.
 
+## Contributing
 
-<h4>Technology used</h4>
+Contributions to Todo Kamilo are welcome! To contribute:
+
+1. Fork the repository and create a new branch for your changes.
+2. Make your improvements or fixes.
+3. Submit a pull request.
+
+Feel free to distribute and improve upon this project as you see fit.
+- <h4>Technology used</h4>
 <div>
   <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-original.svg"  title="CSS3" alt="CSS" width="40" height="40"/>&nbsp;
@@ -45,3 +89,14 @@ Let's make todo list management simple and enjoyable!
   <img src="https://github.com/VSCodium/vscodium/raw/master/icons/stable/codium_cnl.svg" title="VSCodium"  alt="VSCodium" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" title="Git"  alt="Git" width="40" height="40"/>&nbsp;
 </div>
+
+## License
+Todo Kamilo is licensed under the [GPL-3.0 License](https://opensource.org/licenses/GPL-3.0). See the LICENSE file for more details.
+
+## Contact
+For any inquiries or further information, please reach out:
+
+- **GitHub:** [manojis41](https://github.com/manojis41)
+- **Website:** [manoj41.com.np/contact](http://manoj41.com.np/contact)
+
+---
