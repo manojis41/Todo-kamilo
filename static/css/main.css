@@ -156,3 +156,6 @@ a[href]:hover {
   display: flex;
   justify-content: center;
 }
+.error-msg{
+  color:red;
+}
